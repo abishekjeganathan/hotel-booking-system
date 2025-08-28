@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: payment-service
+server:
+  port: 8084
+stripe:
+  secret-key: YOUR_STRIPE_KEY
