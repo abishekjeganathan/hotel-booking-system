@@ -2,4 +2,17 @@ spring:
   application:
     name: booking-service
 server:
-  port: 8082
+  port: 8spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/booking_db
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+stripe:
+  secret-key: sk_test_booking
+082
+  
