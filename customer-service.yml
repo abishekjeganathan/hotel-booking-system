@@ -5,3 +5,23 @@ server:
   port: 8081
 jwt:
   secret: mysecret
+  spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/customer_db
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+stripe:
+  secret-key: sk_test_customer
+
+sendgrid:
+  api-key: SG_customer
+
+twilio:
+  account-sid: AC_customer
+  auth-token: AUTH_customer
+
