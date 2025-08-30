@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: security-service
+  server:
+    port: 8085
+
+jwt:
+  secret: mySecretKey123
+  expiration: 3600000  # 1 hour in ms
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
