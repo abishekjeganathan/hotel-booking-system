@@ -2,28 +2,17 @@ server:
   port: 8081
 
 spring:
-  application:
-    name: customer-service
-  config:
-    import: "optional:configserver:http://localhost:8888"
   datasource:
-    url: jdbc:mysql://localhost:3306/customer_db
+    url: jdbc:mysql://localhost:3306/booking_db
     username: root
     password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
 
-jwt:
-  secret: mysecret
-
-stripe:
-  secret-key: sk_test_customer
-
-sendgrid:
-  api-key: SG_customer
-
-twilio:
-  account-sid: AC_customer
-  auth-token: AUTH_customer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
