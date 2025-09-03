@@ -1,8 +1,9 @@
 spring:
   application:
     name: security-service
-  server:
-    port: 8085
+
+server:
+  port: 8085
 
 jwt:
   secret: mySecretKey123
@@ -12,3 +13,11 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+# Redis config
+spring:
+  data:
+    redis:
+      host: localhost       # change to redis-server or AWS endpoint in prod
+      port: 6379
+      timeout: 60000        # 60s timeout
