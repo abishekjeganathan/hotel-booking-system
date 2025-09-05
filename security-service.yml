@@ -23,11 +23,6 @@ spring:
 server:
   port: 8085
 
-jwt:
-  secret: mySecretKey123
-  expiration: 3600000       # 1 hour access token
-  refreshExpiration: 604800000 # 7 days refresh token (you can change to 2d/3d as needed)
-
 eureka:
   client:
     register-with-eureka: true
